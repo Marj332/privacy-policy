@@ -16,5 +16,5 @@ If you have any questions or concerns about our Privacy Policy or how we handle 
 
 ## License
 
-This repository is licensed under [License Name], see the LICENSE file for details.
-# privacy-policy
+This repository is licensed under the [MIT License](./LICENSE). See the LICENSE file for details.
+
