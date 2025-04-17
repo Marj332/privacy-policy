@@ -1,0 +1,13 @@
+name: Supabase Countdown Function
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Every minute
+
+jobs:
+  countdown-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Supabase Edge Function
+        run: |
+          curl -X POST https://xxmdaccbrarqjjbmwqom.supabase.co/functions/v1/update-overdue-documents
