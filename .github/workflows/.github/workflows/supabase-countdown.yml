@@ -10,4 +10,5 @@ jobs:
     steps:
       - name: Call Supabase Edge Function
         run: |
-          curl -X POST https://xxmdaccbrarqjjbmwqom.supabase.co/functions/v1/update-overdue-documents
+          curl -X POST https://xxmdaccbrarqjjbmwqom.supabase.co/functions/v1/update-overdue-documents \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}"
