@@ -7,8 +7,10 @@ on:
 jobs:
   countdown-job:
     runs-on: ubuntu-latest
+
     steps:
       - name: Call Supabase Edge Function
         run: |
-          curl -X POST https://xxmdaccbrarqjjbmwqom.supabase.co/functions/v1/update-overdue-documents \
+          echo "Calling Supabase Edge Function at $(date)"
+          curl -i -X POST https://xxmdaccbrarqjjbmwqom.supabase.co/functions/v1/update-overdue-documents \
             -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}"
